@@ -1,0 +1,74 @@
+{
+  "root": "apps/burrito-ui",
+  "sourceRoot": "apps/burrito-ui/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/burrito-ui",
+        "index": "apps/burrito-ui/src/index.html",
+        "baseHref": "/",
+        "main": "apps/burrito-ui/src/main.tsx",
+        "polyfills": "apps/burrito-ui/src/polyfills.ts",
+        "tsConfig": "apps/burrito-ui/tsconfig.app.json",
+        "assets": [
+          "apps/burrito-ui/src/favicon.ico",
+          "apps/burrito-ui/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/burrito-ui/src/environments/environment.ts",
+              "with": "apps/burrito-ui/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "burrito-ui:build",
+        "hmr": true,
+        "proxyConfig": "apps/burrito-ui/proxy.conf.json"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "burrito-ui:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/burrito-ui/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/burrito-ui"],
+      "options": {
+        "jestConfig": "apps/burrito-ui/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
