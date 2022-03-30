@@ -13,8 +13,11 @@ Places will be shown on OpenMaps through Leaftlet.js and users can search for ne
 ### UI
 
 [Solid-js with Vite](https://www.solidjs.com/)
+
 [Vite](https://vitejs.dev/)
+
 [Leaflet.js](https://leafletjs.com/)
+
 [chakra-ui](https://chakra-ui.com/)
 
 ### Maps
