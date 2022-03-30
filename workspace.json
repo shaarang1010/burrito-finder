@@ -4,6 +4,8 @@
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
     "burrito-ui": "apps/burrito-ui",
-    "burrito-ui-e2e": "apps/burrito-ui-e2e"
+    "burrito-ui-e2e": "apps/burrito-ui-e2e",
+    "ui": "apps/ui",
+    "ui-e2e": "apps/ui-e2e"
   }
 }

@@ -1,0 +1,41 @@
+{
+  "root": "apps/ui",
+  "sourceRoot": "apps/ui/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nxext/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/ui",
+        "frameworkConfigFile": "@nxext/solid/plugins/vite"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nxext/vite:dev",
+      "options": {
+        "outputPath": "dist/apps/ui",
+        "frameworkConfigFile": "@nxext/solid/plugins/vite"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ui/**/*.{ts,spec.ts,tsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/ui"],
+      "options": {
+        "jestConfig": "apps/ui/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
