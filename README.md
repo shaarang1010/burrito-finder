@@ -6,6 +6,20 @@ Public can add their reviews and the location - StreetName, postcode, review in 
 
 Places will be shown on OpenMaps through Leaftlet.js and users can search for nearest places.
 
+### API
+
+[Express-Nodejs](https://expressjs.com/)
+
+### UI
+
+[Solid-js with Vite](https://www.solidjs.com/)
+[Leaflet.js](https://leafletjs.com/)
+[chakra-ui](https://chakra-ui.com/)
+
+### Maps
+
+[Azure Maps](https://azure.microsoft.com/en-au/services/azure-maps/#azuremaps-overview)
+
 ---
 
 This project was generated using [Nx](https://nx.dev) monorepo.
